@@ -1,9 +1,7 @@
 import './ProjectCard.css';
-import {useState} from 'react';
-import { Link, useLocation } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function ProjectCard({projectName, projectDesc, skillsStrengthened, imgPath, index, dates}) {
-    const location = useLocation();
     const projectLink = projectName.replace(' ', '-').toLowerCase()
 
 

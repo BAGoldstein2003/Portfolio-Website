@@ -1,6 +1,5 @@
 import Resume from '../components/Resume.jsx';
 import './Home.css';
-import {useState} from 'react'
 
 export default function Home() {
   

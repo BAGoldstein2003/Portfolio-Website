@@ -1,7 +1,6 @@
 import './App.css';
-import {BrowserRouter, Routes, Route, useLocation} from 'react-router-dom';
-import {useState, useEffect} from 'react'
-import { CSSTransition } from 'react-transition-group';
+import {BrowserRouter, Routes, Route} from 'react-router-dom';
+import {useEffect} from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Home from './routes/Home.jsx';
@@ -14,7 +13,7 @@ import ProjectInfo from './routes/ProjectInfo.jsx'
 
 
 function App() {
-  const [projects, setProjects] = useState([
+  const projects = [
     {
       projectName: 'Recipe.AI',
       projectDesc: "This project takes in user-submitted recipe attributes to create delicious recipes faster than you can say Hungry!!",
@@ -31,7 +30,7 @@ function App() {
       dates: "2025 - Present",
       about: "This project was created to help employers secure their timeclock system, ensuring anyone who clocks in to do their job is ACTUALLY who they say they are."
     }
-  ]);
+  ];
   const projectToLink = (projectName) => {
     return projectName.replace(' ', '-').toLowerCase()
   }

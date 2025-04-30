@@ -2,13 +2,7 @@ import './ContactForm.css';
 import emailjs from '@emailjs/browser';
 import {useRef} from 'react';
 import Input from './Input.jsx';
-import { motion } from 'framer-motion';
 
-const pageVariants = {
-    initial: { opacity: 0 },
-    animate: { opacity: 1 },
-    exit: { opacity: 0 },
-  };
 
 //contact form component
 export default function ContactForm() {
