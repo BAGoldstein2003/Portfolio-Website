@@ -9,7 +9,7 @@ export default function Home() {
     <>
 
       <h1 className="title">Welcome to Brian's Portfolio</h1>
-      <Resume></Resume>
+      <Resume className="resume"></Resume>
     </>
   )
 }

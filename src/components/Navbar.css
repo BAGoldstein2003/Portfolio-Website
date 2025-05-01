@@ -10,22 +10,26 @@
     transition: all 0.3s ease-out;
     z-index: 1000;
 }
-  
-.navbar.expanded {
-    width: 100%;
-    justify-content: center;
-    height: 12.5rem; /* 200px */
-}
-  
+
 .links {
+    transition: all 0.3s ease;
     justify-content: center;
+    align-items: center;
     display: inline-flex;
     color: black;
     padding-right: 3.125rem; /* 50px */
 }
+
+.social-links {
+    display: flex;
+    align-items: center;
+}
   
 .link {
     background-color: #383c47;
+    text-align: center;
+    width: fit-content;
+    height: fit-content;
     margin: 0.625rem; /* 10px */
     padding: 0.625rem; /* 10px */
     font-size: larger;
