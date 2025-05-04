@@ -20,7 +20,6 @@ export default function ContactForm() {
         'Hr59z37C7JXW3Ecf3'
         );
     }
-    form.current.reset()
 
 
 
