@@ -11,12 +11,13 @@ export default function ContactForm() {
     const form = useRef();
     
     //handles form submit
-    const sendEmail = () => {
+    const sendEmail = (e) => {
+        e.preventDefault()
         emailjs.sendForm(
         'gmail_service',
         'template_yz5gbt9',
         form.current,
-        'ZZ8HSpgoDXZ8qO6bh'
+        'Hr59z37C7JXW3Ecf3'
         );
     }
 
