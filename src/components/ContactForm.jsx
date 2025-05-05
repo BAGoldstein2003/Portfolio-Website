@@ -12,7 +12,6 @@ export default function ContactForm() {
     
     //handles form submit
     const sendEmail = (e) => {
-        e.preventDefault()
         emailjs.sendForm(
         'gmail_service',
         'template_yz5gbt9',
