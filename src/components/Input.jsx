@@ -2,11 +2,11 @@ import React from 'react';
 import styled from 'styled-components';
 
 //input component for forms
-const Input = ({label, onChange}) => {
+const Input = ({label, onChange, value}) => {
   return (
     <StyledWrapper>
       <div className="group">
-        <input required type='text' className="input" name={label} onChange={onChange}/>
+        <input required type='text' className="input" name={label} onChange={onChange} value = {value}/>
         <span className="bar" />
         <label>{label}</label>
       </div>
