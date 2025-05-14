@@ -17,10 +17,14 @@ export default function Resume() {
     }
 
     useEffect(() => {
+        const element = document.querySelector('.resume'); // or any valid selector
+
+        const rect = element.getBoundingClientRect();
+        const resumeMiddle = rect.top + rect.height / 2;
         setTimeout(() => {
             if (isResumeLarge) {
             window.scrollTo({
-                top: document.querySelector('.resume').offsetTop - 100, // Adjust for header height
+                top: resumeMiddle,
                 behavior: 'smooth'
             });
         }
