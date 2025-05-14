@@ -20,7 +20,7 @@ export default function Resume() {
         <div className="resume-container">
 
             <h2>My Resume</h2>
-            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/myResume.jpg" alt="resume"/>
+            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/BrianResume.jpg" alt="resume"/>
             <h3 id="click">Click To {!isResumeLarge ? 'Enlarge' : 'Reduce'}</h3>
             <button className="download-button" onClick={handleDownload}>
                 Download {alreadyDownload ? 'Again' : ''}<br></br>

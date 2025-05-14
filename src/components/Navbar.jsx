@@ -16,14 +16,20 @@ export default function Navbar() {
         <Link to='/contact' className={`link ${location.pathname === '/contact' ? 'active' : ''}`}>Contact Me</Link>
       </div>
       <div className="social-links">
-        <a href="https://github.com/BAGoldstein2003" target="_blank" rel="noreferrer">
-          <FaGithub className = "github-icon"  size={50}></FaGithub>
-        </a>
-        <a href="https://www.linkedin.com/in/brian-goldstein-softdev/" target="_blank" rel="noreferrer">
-          <CiLinkedin className = "linkedin-icon" size={50}></CiLinkedin>
-        </a>
+          <div className="github-container">
+            <a href="https://github.com/BAGoldstein2003" target="_blank" rel="noreferrer">
+              <FaGithub className = "github-icon"  size={50}></FaGithub>
+              
+            </a>
+            <p></p>
+          </div>
+          <div className="linkedin-container">
+            <a href="https://www.linkedin.com/in/brian-goldstein-softdev/" target="_blank" rel="noreferrer">
+              <CiLinkedin className = "linkedin-icon" size={50}></CiLinkedin>
+            </a>
+          </div>
         </div>
-    </div>
+      </div>
   )
 }
 
