@@ -1,5 +1,5 @@
 import './Resume.css'
-import {useState} from 'react'
+import {useState, useEffect } from 'react'
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
 export default function Resume() {
@@ -15,6 +15,19 @@ export default function Resume() {
         document.body.removeChild(link);
         setAlreadyDownload(true);
     }
+
+    useEffect(() => {
+        setTimeout(() => {
+            if (isResumeLarge) {
+            window.scrollTo({
+                top: document.querySelector('.resume').offsetTop - 100, // Adjust for header height
+                behavior: 'smooth'
+            });
+        }
+        }, 300)
+        
+        
+    }, [isResumeLarge])
 
     return (
         <div className="resume-container">
