@@ -1,5 +1,5 @@
 import './Resume.css'
-import {useState} from 'react'
+import {useState, useEffect } from 'react'
 import { FaCloudDownloadAlt } from "react-icons/fa";
 
 export default function Resume() {
@@ -16,11 +16,28 @@ export default function Resume() {
         setAlreadyDownload(true);
     }
 
+    useEffect(() => {
+        const element = document.querySelector('.resume'); // or any valid selector
+
+        const rect = element.getBoundingClientRect();
+        const resumeMiddle = rect.top + rect.height / 2;
+        setTimeout(() => {
+            if (isResumeLarge) {
+            window.scrollTo({
+                top: resumeMiddle,
+                behavior: 'smooth'
+            });
+        }
+        }, 300)
+        
+        
+    }, [isResumeLarge])
+
     return (
         <div className="resume-container">
 
             <h2>My Resume</h2>
-            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/myResume.jpg" alt="resume"/>
+            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/BrianResume.jpg" alt="resume"/>
             <h3 id="click">Click To {!isResumeLarge ? 'Enlarge' : 'Reduce'}</h3>
             <button className="download-button" onClick={handleDownload}>
                 Download {alreadyDownload ? 'Again' : ''}<br></br>

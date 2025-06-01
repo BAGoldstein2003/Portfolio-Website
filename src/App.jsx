@@ -14,7 +14,7 @@ import ProjectInfo from './routes/ProjectInfo.jsx'
 function App() {
   const projects = [
     {
-      projectName: 'Recipe.AI',
+      projectName: 'AI Recipe Generator',
       projectDesc: "This project takes in user-submitted recipe attributes to create delicious recipes faster than you can say Hungry!!",
       skillsStrengthened: ['React.JS', 'CSS', 'OpenAI', 'Flask', 'Full-Stack'],
       imagesPath: "/static/myResume.jpg",
