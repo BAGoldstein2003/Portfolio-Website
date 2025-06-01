@@ -11,7 +11,6 @@ import ProjectInfo from './routes/ProjectInfo.jsx'
 
 
 
-
 function App() {
   const projects = [
     {
@@ -23,7 +22,7 @@ function App() {
       about: "This project was made to help people with busy lives who do not want to spend time searching the internet for recipes!"
     },
     {
-      projectName: 'AI Timeclock',
+      projectName: 'Facial Recognition Timeclock System',
       projectDesc: "This full-stack Streamlit application handles user signup/authentication using facial recognition ensuring strengthened security measures.",
       skillsStrengthened: ['Python', 'Streamlit', 'Database Management', 'SQLite', 'User Validation/Authentication'],
       imagePath: '/static',
