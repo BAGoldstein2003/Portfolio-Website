@@ -15,16 +15,23 @@ import ProjectInfo from './routes/ProjectInfo.jsx'
 function App() {
   const projects = [
     {
+      projectName: 'BestScrape',
+      projectDesc: "This full-stack web-scraping application allows users to scrape data from BestBuy, while neatly displaying all products using ReactJS. Deployed with Render.",
+      skillsStrengthened: ['ReactJS', 'Flask', 'Selenium', 'Full-Stack Development', 'Render', 'Web Scraping', 'HTML', 'CSS'],
+      dates: "2025 - Present",
+      about: "This project was created to showcase my development skills in both front-end and back-end technologies, as well as my ability to deploy applications using cloud services like Render."
+    },
+    {
       projectName: 'AI Recipe Generator',
       projectDesc: "This project takes in user-submitted recipe attributes to create delicious recipes faster than you can say Hungry!!",
-      skillsStrengthened: ['React.JS', 'CSS', 'OpenAI', 'Flask', 'Full-Stack'],
+      skillsStrengthened: ['ReactJS', 'CSS', 'OpenAI', 'Flask', 'Full-Stack'],
       imagesPath: "/static/myResume.jpg",
       dates: "2025 - Present",
       about: "This project was made to help people with busy lives who do not want to spend time searching the internet for recipes!"
     },
     {
       projectName: 'Facial Recognition Timecard System',
-      projectDesc: "This full-stack Streamlit application handles user signup/authentication using facial recognition ensuring strengthened security measures.",
+      projectDesc: "This full-stack Streamlit application handles timecard functions using facial recognition ensuring strengthened security measures.",
       skillsStrengthened: ['Python', 'Streamlit', 'Database Management', 'SQLite', 'User Validation/Authentication'],
       imagePath: '/static',
       dates: "2025 - Present",
