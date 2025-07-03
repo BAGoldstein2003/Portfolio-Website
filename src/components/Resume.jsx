@@ -8,8 +8,8 @@ export default function Resume() {
 
     const handleDownload = () => {
         const link = document.createElement('a');
-        link.href = '/static/BrianResume.pdf';  // Path relative to public folder
-        link.download = 'BrianResume.pdf';      // Filename for the downloaded file
+        link.href = '/static/Brian-Goldstein-Software-Engineer-FINAL.pdf';  // Path relative to public folder
+        link.download = 'BriansResume.pdf';      // Filename for the downloaded file
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
@@ -37,7 +37,7 @@ export default function Resume() {
         <div className="resume-container">
 
             <h2>My Resume</h2>
-            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/BrianResume.jpg" alt="resume"/>
+            <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/Brian-Goldstein-Software-Engineer-FINAL.jpg" alt="resume"/>
             <h3 id="click">Click To {!isResumeLarge ? 'Enlarge' : 'Reduce'}</h3>
             <button className="download-button" onClick={handleDownload}>
                 Download {alreadyDownload ? 'Again' : ''}<br></br>
