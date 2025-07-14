@@ -1,6 +1,6 @@
 import './App.css';
 import {BrowserRouter, Routes, Route} from 'react-router-dom';
-import {useEffect, useState} from 'react'
+import {useEffect} from 'react'
 import { AnimatePresence } from 'framer-motion';
 import Navbar from './components/Navbar.jsx';
 import Home from './routes/Home.jsx';
@@ -38,8 +38,6 @@ function App() {
       about: "This project was created to help employers secure their timeclock system, ensuring anyone who clocks in to do their job is ACTUALLY who they say they are."
     }
   ];
-
-  const [isDarkMode, setIsDarkMode] = useState(false);
   const projectToLink = (projectName) => {
     return projectName.replace(' ', '-').toLowerCase()
   }
@@ -59,7 +57,7 @@ function App() {
   return (
     <AnimatePresence mode="wait">
     <BrowserRouter>
-      <Navbar />
+      <Navbar/>
         <Routes>
           <Route path='/' element={<Home/>}/>
           <Route path='/contact' element={<Contact/>}/>
