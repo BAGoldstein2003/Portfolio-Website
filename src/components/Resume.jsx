@@ -4,7 +4,7 @@ import { FaCloudDownloadAlt } from "react-icons/fa";
 
 export default function Resume() {
     const [isResumeLarge, setIsResumeLarge] = useState(false);
-    const [alreadyDownload, setAlreadyDownload] = useState(false);
+    const [alreadyDownloaded, setAlreadyDownloaded] = useState(false);
 
     const handleDownload = () => {
         const link = document.createElement('a');
@@ -13,7 +13,7 @@ export default function Resume() {
         document.body.appendChild(link);
         link.click();
         document.body.removeChild(link);
-        setAlreadyDownload(true);
+        setAlreadyDownloaded(true);
     }
 
     useEffect(() => {
@@ -40,7 +40,7 @@ export default function Resume() {
             <img className={`resume ${isResumeLarge ? 'large' : ''}`} onClick={() => {setIsResumeLarge(!isResumeLarge)}} src="/static/Brian-Goldstein-Software-Engineer-FINAL.jpg" alt="resume"/>
             <h3 id="click">Click To {!isResumeLarge ? 'Enlarge' : 'Reduce'}</h3>
             <button className="download-button" onClick={handleDownload}>
-                Download {alreadyDownload ? 'Again' : ''}<br></br>
+                Download {alreadyDownloaded ? 'Again' : ''}<br></br>
                 <FaCloudDownloadAlt className="download-icon"/>
             </button>
 

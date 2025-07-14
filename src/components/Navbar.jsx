@@ -1,13 +1,30 @@
-
 import './Navbar.css';
+import './DarkModeButton.css'
 import { Link, useLocation } from 'react-router-dom';
+import {useState, useEffect} from 'react';
 import { FaGithub } from "react-icons/fa";
 import { CiLinkedin } from "react-icons/ci";
 
 //Navigation component
 export default function Navbar() {
   const location = useLocation();
-  
+  const [isDarkMode, setIsDarkMode] = useState(false);
+
+  useEffect(() => {
+    if (isDarkMode) {
+      setTimeout(() => {
+        document.body.style.backgroundColor = '#FAF9F6'
+      }, 300)
+      
+    }
+    else {
+      setTimeout(() => {
+        document.body.style.backgroundColor = '#383c47'
+      }, 300)
+    }
+  })
+
+
   return (
     <div className="navbar">
       <div className='links'>
@@ -19,7 +36,6 @@ export default function Navbar() {
           <div className="github-container">
             <a href="https://github.com/BAGoldstein2003" target="_blank" rel="noreferrer">
               <FaGithub className = "github-icon"  size={50}></FaGithub>
-              
             </a>
             <p></p>
           </div>
@@ -28,8 +44,9 @@ export default function Navbar() {
               <CiLinkedin className = "linkedin-icon" size={50}></CiLinkedin>
             </a>
           </div>
-        </div>
       </div>
+      <input class="l" type="checkbox" checked={isDarkMode} onChange={(e) => setIsDarkMode(e.target.checked)}/>
+    </div>
   )
 }
 
